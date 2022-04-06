@@ -108,8 +108,14 @@ class BinaryNode<T>
    {
       if(this != null)
       {
-         this.getLeftChild().postorderTraverse_binaryNodeMethod();
-         this.getRightChild().postorderTraverse_binaryNodeMethod();
+         if(this.leftChild != null)
+         {
+            this.leftChild.postorderTraverse_binaryNodeMethod();
+         }
+         if(this.rightChild != null)
+         {
+            this.rightChild.postorderTraverse_binaryNodeMethod();
+         }
          System.out.println(this.getData());
       }
    }
