@@ -116,7 +116,7 @@ class BinaryNode<T>
          {
             this.rightChild.postorderTraverse_binaryNodeMethod();
          }
-         System.out.println(this.getData());
+         System.out.print(this.getData());
       }
    }
    
