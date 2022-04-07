@@ -95,7 +95,7 @@ public class DriverBT
       	System.out.println("        A      ");
       	System.out.println("      /   \\   ");
       	System.out.println("     B     C   ");
-      	System.out.println("    / \\   / \\ ");
+      	System.out.println("    / \\   / \\");
       	System.out.println("   D   E  F  G ");
       	System.out.println("  /            ");
       	System.out.println(" H             ");
