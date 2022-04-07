@@ -128,9 +128,21 @@ class BinaryNode<T>
    public int getHeight_binaryNodeMethod()
    {  
       int height = 0;
+      int rightHeight = 0;
+      int leftHeight = 0;
       if (this.data != null)
-         height = 1 + Math.max(this.leftChild.getHeight_binaryNodeMethod(),
-                              this.rightChild.getHeight_binaryNodeMethod());
+      {
+         if(leftChild != null)
+         {
+            leftHeight = this.leftChild.getHeight_binaryNodeMethod();
+         }
+         if(rightChild != null)
+         {
+            rightHeight = this.rightChild.getHeight_binaryNodeMethod();
+         }
+      }
+         
+         height = 1 + Math.max(leftHeight, rightHeight);
                              
       return height;
    } // end getHeight
