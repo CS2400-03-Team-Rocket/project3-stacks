@@ -4,7 +4,7 @@ import java.io.PrintStream;
 
 import org.junit.Test;
 
-public class Task1Test extends BinaryTree 
+public class BinaryTreeTest extends BinaryTree 
 {
     @Test
     public void testPostorderTraverse()
