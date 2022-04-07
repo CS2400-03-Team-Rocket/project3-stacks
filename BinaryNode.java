@@ -96,7 +96,6 @@ class BinaryNode<T>
       
       if (rightChild != null)
          newRoot.setRightChild(rightChild.copy());
-      
       return newRoot;
    } // end copy
 
@@ -109,13 +108,10 @@ class BinaryNode<T>
       if(this != null)
       {
          if(this.leftChild != null)
-         {
             this.leftChild.postorderTraverse_binaryNodeMethod();
-         }
+         
          if(this.rightChild != null)
-         {
             this.rightChild.postorderTraverse_binaryNodeMethod();
-         }
          System.out.print(this.getData());
       }
    }
@@ -133,17 +129,12 @@ class BinaryNode<T>
       if (this.data != null)
       {
          if(leftChild != null)
-         {
             leftHeight = this.leftChild.getHeight_binaryNodeMethod();
-         }
-         if(rightChild != null)
-         {
-            rightHeight = this.rightChild.getHeight_binaryNodeMethod();
-         }
-      }
          
-         height = 1 + Math.max(leftHeight, rightHeight);
-                             
+         if(rightChild != null)
+            rightHeight = this.rightChild.getHeight_binaryNodeMethod();
+      }
+      height = 1 + Math.max(leftHeight, rightHeight);                  
       return height;
    } // end getHeight
    
