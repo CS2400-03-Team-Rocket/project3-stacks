@@ -78,12 +78,13 @@ public class DriverBT
 	public static void createTree2(BinaryTree<String> tree)
 	{ 
 		// Leaves
-		BinaryTree<String> hTree = new BinaryTree<>("H");
+		BinaryTree<String> iTree = new BinaryTree<>("I");
 		BinaryTree<String> eTree = new BinaryTree<>("E");
 		BinaryTree<String> fTree = new BinaryTree<>("F");
 		BinaryTree<String> gTree = new BinaryTree<>("G");
 
 		// Subtrees:
+		BinaryTree<String> hTree = new BinaryTree<>("H", null, iTree);
 		BinaryTree<String> dTree = new BinaryTree<>("F", hTree, null);
 		BinaryTree<String> bTree = new BinaryTree<>("B", dTree, eTree);
 		BinaryTree<String> cTree = new BinaryTree<>("C", fTree, gTree);
@@ -94,10 +95,12 @@ public class DriverBT
       	System.out.println("        A      ");
       	System.out.println("      /   \\   ");
       	System.out.println("     B     C   ");
-      	System.out.println("    / \\  / \\ ");
+      	System.out.println("    / \\   / \\ ");
       	System.out.println("   D   E  F  G ");
       	System.out.println("  /            ");
       	System.out.println(" H             ");
+		System.out.println("  \\           ");
+		System.out.println("   I           ");
       	System.out.println();
 	} // end createTree2
 
