@@ -51,7 +51,7 @@ public class Task1Test extends BinaryTree
         System.setOut(new PrintStream(outContent));
 
         mockBinaryTree.postorderTraverse_callBinaryNodeMethod();
-
+        
         //4527631
         assertEquals("4527631", outContent.toString());
 
@@ -98,11 +98,10 @@ public class Task1Test extends BinaryTree
 
 		mockBinaryTree.setTree(1, bTree, cTree);
 
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outContent));
+        int expected = 7;
 
-        mockBinaryTree.getNumberOfNodes();
-        //height = 7
-        assertEquals("7", outContent.toString());
+        int output = mockBinaryTree.getNumberOfNodes();
+        //nodes = 7
+        assertEquals(expected, output);
     }
 }
